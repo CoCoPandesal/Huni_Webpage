@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Huni — Landing Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <header>
+    <nav class="container nav">
+      <a href="#home" class="logo"><span class="logo-mark">A</span> Huni</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#download">Download</a></li>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#about-app">About App</a></li>
+        <li><a href="#about-us">About Us</a></li>
+      </ul>
+      <a href="#download" class="btn btn-primary nav-cta">Get the App</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">&#9776;</button>
+    </nav>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Introducing AppName</span>
+        <h1>Smarter tracking for <span>everyday life</span></h1>
+        <p>AppName helps you monitor, manage, and understand your data in one place — fast, simple, and available on every device.</p>
+        <div class="hero-actions">
+          <a href="#download" class="btn btn-primary">&#11015; Download Now</a>
+          <a href="#dashboard" class="btn btn-outline">View Dashboard</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>10K+</strong><span>Downloads</span></div>
+          <div><strong>4.8&#9733;</strong><span>User Rating</span></div>
+          <div><strong>24/7</strong><span>Real-time Sync</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="phone">
+          <div class="phone-screen">
+            <h4>Good morning 👋</h4>
+            <div class="phone-card">
+              <small>Today's Progress</small>
+              <div class="big">78%</div>
+              <div class="phone-bar"><div style="width:78%"></div></div>
+            </div>
+            <div class="phone-card">
+              <small>Active Tasks</small>
+              <div class="big">12</div>
+            </div>
+            <div class="phone-card">
+              <small>Weekly Goal</small>
+              <div class="phone-bar"><div style="width:55%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Download ===== -->
+  <section id="download" class="section-alt">
+    <div class="container center">
+      <span class="eyebrow">Download</span>
+      <h2 class="section-title">Get AppName on your device</h2>
+      <p class="section-sub">Available for Android, iOS, and desktop. Install in seconds and sync your data across all platforms.</p>
+
+      <div class="download-grid">
+        <div class="download-card">
+          <div class="download-icon">🤖</div>
+          <h3>Android</h3>
+          <p>Requires Android 8.0 or later</p>
+          <a href="#" class="btn btn-primary">Download APK</a>
+          <div class="download-meta">Version 1.0.0 · 25 MB</div>
+        </div>
+        <div class="download-card">
+          <div class="download-icon">🍎</div>
+          <h3>iOS</h3>
+          <p>Requires iOS 14 or later</p>
+          <a href="#" class="btn btn-primary">App Store</a>
+          <div class="download-meta">Version 1.0.0 · 30 MB</div>
+        </div>
+        <div class="download-card">
+          <div class="download-icon">💻</div>
+          <h3>Web / Desktop</h3>
+          <p>Works on Windows, macOS & Linux</p>
+          <a href="#dashboard" class="btn btn-primary">Open Web App</a>
+          <div class="download-meta">No installation needed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Dashboard ===== -->
+  <section id="dashboard">
+    <div class="container">
+      <div class="center">
+        <span class="eyebrow">Dashboard</span>
+        <h2 class="section-title">Everything at a glance</h2>
+        <p class="section-sub">A clean, powerful dashboard that shows your key numbers, trends, and recent activity in real time.</p>
+      </div>
+
+      <div class="dashboard">
+        <aside class="dash-side">
+          <div class="logo"><span class="logo-mark">A</span> AppName</div>
+          <ul class="dash-nav">
+            <li class="active">📊 Overview</li>
+            <li>📈 Analytics</li>
+            <li>👥 Users</li>
+            <li>📁 Reports</li>
+            <li>⚙️ Settings</li>
+          </ul>
+        </aside>
+        <div class="dash-main">
+          <div class="dash-head">
+            <div>
+              <h3>Overview</h3>
+              <span>Welcome back, Admin</span>
+            </div>
+            <span id="dashDate"></span>
+          </div>
+
+          <div class="kpis">
+            <div class="kpi"><small>Total Users</small><div class="val">1,284</div><div class="trend up">▲ 12.5%</div></div>
+            <div class="kpi"><small>Active Today</small><div class="val">342</div><div class="trend up">▲ 4.2%</div></div>
+            <div class="kpi"><small>Reports</small><div class="val">89</div><div class="trend down">▼ 1.8%</div></div>
+            <div class="kpi"><small>Completion</small><div class="val">92%</div><div class="trend up">▲ 3.1%</div></div>
+          </div>
+
+          <div class="dash-panels">
+            <div class="panel">
+              <h4>Weekly Activity</h4>
+              <div class="chart" id="chart"></div>
+            </div>
+            <div class="panel">
+              <h4>Recent Activity</h4>
+              <ul class="activity">
+                <li><span class="dot" style="background:#4f46e5"></span><div>New user registered<small>2 minutes ago</small></div></li>
+                <li><span class="dot" style="background:#06b6d4"></span><div>Report generated<small>15 minutes ago</small></div></li>
+                <li><span class="dot" style="background:#16a34a"></span><div>Data synced successfully<small>1 hour ago</small></div></li>
+                <li><span class="dot" style="background:#f59e0b"></span><div>Settings updated<small>3 hours ago</small></div></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About App ===== -->
+  <section id="about-app" class="section-alt">
+    <div class="container">
+      <div class="center">
+        <span class="eyebrow">About the App</span>
+        <h2 class="section-title">Built to make your work easier</h2>
+        <p class="section-sub">AppName was developed as a thesis project to solve a real problem: giving people a simple, reliable way to collect, track, and analyze information.</p>
+      </div>
+
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">⚡</div>
+          <h3>Fast & Lightweight</h3>
+          <p>Optimized for speed so it runs smoothly even on low-end devices and slow connections.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🔒</div>
+          <h3>Secure</h3>
+          <p>Your data is protected with secure authentication and encrypted storage.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🔄</div>
+          <h3>Real-time Sync</h3>
+          <p>Changes appear instantly across your phone, tablet, and computer.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📊</div>
+          <h3>Smart Analytics</h3>
+          <p>Turn raw data into clear charts and reports you can act on.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🔔</div>
+          <h3>Notifications</h3>
+          <p>Get timely alerts and reminders so you never miss what matters.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📱</div>
+          <h3>Cross-platform</h3>
+          <p>One account works everywhere — Android, iOS, and the web.</p>
+        </div>
+      </div>
+
+      <div class="how">
+        <div class="step"><h4>Download</h4><p>Install AppName from the download section above.</p></div>
+        <div class="step"><h4>Sign Up</h4><p>Create your free account in under a minute.</p></div>
+        <div class="step"><h4>Get Started</h4><p>Add your data and watch your dashboard come to life.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About Us ===== -->
+  <section id="about-us">
+    <div class="container about-us-grid">
+      <div>
+        <span class="eyebrow">About Us</span>
+        <h2 class="section-title">The team behind AppName</h2>
+        <p class="section-sub">We are a group of students passionate about technology and building solutions that make a difference. AppName is the result of our thesis research and development.</p>
+
+        <div class="mission-box">
+          <div class="mission-item">
+            <div class="feature-icon">🎯</div>
+            <div><h4>Our Mission</h4><p>To deliver accessible, easy-to-use technology that helps people work smarter.</p></div>
+          </div>
+          <div class="mission-item">
+            <div class="feature-icon">🌟</div>
+            <div><h4>Our Vision</h4><p>A community where everyone can benefit from simple, data-driven tools.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team">
+        <div class="member"><div class="avatar">M1</div><h4>Member Name</h4><span>Project Leader</span></div>
+        <div class="member"><div class="avatar">M2</div><h4>Member Name</h4><span>Lead Developer</span></div>
+        <div class="member"><div class="avatar">M3</div><h4>Member Name</h4><span>UI/UX Designer</span></div>
+        <div class="member"><div class="avatar">M4</div><h4>Member Name</h4><span>Researcher / QA</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section style="padding-top:0">
+    <div class="container">
+      <div class="cta">
+        <h2>Ready to get started?</h2>
+        <p>Download AppName today and take control of your data.</p>
+        <a href="#download" class="btn">&#11015; Download Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo"><span class="logo-mark">A</span> AppName</div>
+          <p>A thesis project focused on building simple, reliable tools for everyone.</p>
+        </div>
+        <div>
+          <h5>Navigate</h5>
+          <ul>
+            <li><a href="#download">Download</a></li>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#about-app">About App</a></li>
+            <li><a href="#about-us">About Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Platforms</h5>
+          <ul>
+            <li><a href="#download">Android</a></li>
+            <li><a href="#download">iOS</a></li>
+            <li><a href="#download">Web</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Contact</h5>
+          <ul>
+            <li>your.email@example.com</li>
+            <li>Your University</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; <span id="year"></span> AppName. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
